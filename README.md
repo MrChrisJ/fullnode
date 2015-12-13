@@ -17,14 +17,18 @@ The main focus will be on educating and inspiring a new generation of people to 
 4. After a few minutes the device will begin syncing with the Bitcoin Blockchain
 5. Go to your computer’s command line and type: 
 
-```ssh pi@fullnode.local```
+```
+ssh pi@fullnode.local
+```
 
 Username: pi  
 Password: raspberry  
 
 Bitcoin should start automatically in headless mode, to get started type:
 
-```bitcoin-cli getinfo```
+```
+bitcoin-cli getinfo
+```
 
 After a few moments Bitcoin should report errors but telling you that is Loading the Blockchain, Verifying Blocks etc. Please be patient, this can take some time but while you’re making a nice cup of tea you can feel good knowing you are supporting the Bitcoin network by distributing its database.
 
@@ -36,11 +40,15 @@ startx
 
 This will load up the desktop mode. To load up Bitcoin Graphical User Interface type open up Terminal from top menu bar and type:
 
-```bitcoin-cli stop```
+```
+bitcoin-cli stop
+```
 
 You will need to wait a minute or so for Bitcoin Server to stop. Then type:
 
-```bitcoin-qt```
+```
+bitcoin-qt
+```
 
 You may get an error if you did it too quickly, no problem, just press the Up Arrow on your keyboard, hit return to try again. 
 
