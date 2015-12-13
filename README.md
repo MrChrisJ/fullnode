@@ -38,7 +38,7 @@ This will load up the desktop mode. To load up Bitcoin Graphical User Interface 
 
 You will need to wait a minute or so for Bitcoin Server to stop. Then type:
 
-``` bitcoin-qt```
+```bitcoin-qt```
 
 You may get an error if you did it too quickly, no problem, just press the Up Arrow on your keyboard, hit return to try again. 
 
