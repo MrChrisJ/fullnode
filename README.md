@@ -6,7 +6,7 @@ This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on
 # Motivation
 The goal of this project is to learn and layout a simple process for someone to be able to build a Bitcoin Fullnode using nothing but low cost, open source available tools.
 
-The main focus will be on educating and inspiring a new generation of people to begin hosting bitcoin fullnodes to help decentralise the network and to encourage enthusiasts to become janitors of the blockchain. 
+The main focus will be on educating and inspiring a new generation of people to begin hosting bitcoin fullnodes to help decentralise the network and to encourage enthusiasts to become janitors of the blockchain.
 
 # README.TXT
 ==========
@@ -19,13 +19,12 @@ The main focus will be on educating and inspiring a new generation of people to 
 
 ```ssh pi@fullnode.local```
 
-Username: pi
-Password: raspberry
+Username: pi  
+Password: raspberry  
 
-5. Bitcoin should start automatically in headless mode, to get started type:
+Bitcoin should start automatically in headless mode, to get started type:
 
-```
-bitcoin-cli getinfo
+```bitcoin-cli getinfo```
 
 After a few moments Bitcoin should report errors but telling you that is Loading the Blockchain, Verifying Blocks etc. Please be patient, this can take some time but while you’re making a nice cup of tea you can feel good knowing you are supporting the Bitcoin network by distributing its database.
 
