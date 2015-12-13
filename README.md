@@ -17,28 +17,29 @@ The main focus will be on educating and inspiring a new generation of people to 
 4. After a few minutes the device will begin syncing with the Bitcoin Blockchain
 5. Go to your computer’s command line and type: 
 
->> ssh pi@fullnode.local
+```ssh pi@fullnode.local```
 
 Username: pi
 Password: raspberry
 
 5. Bitcoin should start automatically in headless mode, to get started type:
 
->> bitcoin-cli getinfo
+```
+bitcoin-cli getinfo
 
 After a few moments Bitcoin should report errors but telling you that is Loading the Blockchain, Verifying Blocks etc. Please be patient, this can take some time but while you’re making a nice cup of tea you can feel good knowing you are supporting the Bitcoin network by distributing its database.
 
 You can also plug the Pi in to most modern TVs using an HDMI lead. Plug in a keyboard and mouse and type:
 
->> startx
+```startx```
 
 This will load up the desktop mode. To load up Bitcoin Graphical User Interface type open up Terminal from top menu bar and type:
 
->> bitcoin-cli stop
+```bitcoin-cli stop```
 
 You will need to wait a minute or so for Bitcoin Server to stop. Then type:
 
->> bitcoin-qt
+``` bitcoin-qt```
 
 You may get an error if you did it too quickly, no problem, just press the Up Arrow on your keyboard, hit return to try again. 
 
@@ -52,3 +53,11 @@ A signed Certificate of Authenticity is in your Home folder. If you want one whi
 Have fun and remember there’s more to come beginning 6th January 2016. Thank you for supporting the cause. From everyone at ProTip and the Fullnode project we hope you have a wonderful holiday season.
 
 For more info visit fullnode.protip.is
+
+# Further Reading
+This repo is a work in progress. For further information checkout the following sites:
+
+[Developer Examples on Bitcoin.org](https://bitcoin.org/en/developer-examples#testnet)  
+[Bitcoin.it Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin)  
+[API Call Lists as of v0.8.0](https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list)
+[API reference (JSON-RPC)](https://en.bitcoin.it/wiki/API_reference_(JSON-RPC))
