@@ -30,7 +30,7 @@ After a few moments Bitcoin should report errors but telling you that is Loading
 
 You can also plug the Pi in to most modern TVs using an HDMI lead. Plug in a keyboard and mouse and type:
 
-startx
+```startx```
 
 This will load up the desktop mode. To load up Bitcoin Graphical User Interface type open up Terminal from top menu bar and type:
 
