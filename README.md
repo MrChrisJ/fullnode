@@ -3,6 +3,10 @@ Setting up a Bitcoin Fullnode on a Raspberry Pi 2
 
 This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on the ProTip crowd fund: [Not (Just) Made In China](https://www.startjoin.com/ProTip).
 
+
+![Bitcoin Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Device_001.png)
+*Bitcoin/Pi Artwork by* [*Phneep*](Phneep.com)
+
 # Motivation
 The goal of this project is to learn and layout a simple process for someone to be able to build a Bitcoin Fullnode using nothing but low cost, open source available tools.
 
