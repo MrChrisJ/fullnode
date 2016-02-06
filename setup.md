@@ -127,6 +127,7 @@ This will open a blank text editor. Enter the following text as a minimum:
 ```
 listen=1
 server=1
+dbcache=50
 daemon=1
 testnet=0
 rpcuser=rpcuser
