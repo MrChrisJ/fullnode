@@ -47,7 +47,7 @@ sudo apt-get upgrade -y
 ```  
 The -y flag tells the OS to answer "yes" to any prompts warning you of extra disk space required, we use this for convenience but it is not essential.  
 
-#### Instal the dependencies
+#### Install the dependencies
 ```
 sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev libtool -y
 ```
