@@ -135,6 +135,23 @@ rpcpassword=changme_and_make_me_secure
 ```
 Press ```cntr+X``` followed by ```Y``` then ```Enter``` to save changes and return back to the command line.
 
+```
+sudo blkid
+```  
+Make a note of the UUID
+
+```
+sudo nano /etc/fstab
+```  
+
+Enter the following:  
+```
+UUID=8736-1215    /home/pi/.bitcoin    vfat uid=pi,gid=pi,umask=0022,sync,auto,nosuid,rw,nouser    0    0
+```  
+```
+sudo reboot
+```  
+
 ## Installing the other apps
 
 ```
