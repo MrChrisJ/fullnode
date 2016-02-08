@@ -99,7 +99,7 @@ git clone -b v0.11.2 https://github.com/bitcoin/bitcoin.git
 cd bitcoin/
 ```  
 ```
-./autogen
+./autogen.sh
 ```  
 ```
 ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui
