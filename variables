@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Path to folder where we install source code
+export SRC=~/src
+
+# Path to the fullnode repository
+export FULLNODE=~/fullnode

@@ -1,0 +1,12 @@
+# Default ~/.bitcoin/bitcoin.conf configuration from
+# https://github.com/MrChrisJ/fullnode.git project
+
+## TODO add brief documentation of the options below
+
+listen=1
+server=1
+dbcache=50
+daemon=1
+testnet=0
+rpcuser=rpcuser
+rpcpassword=__FULLNODE__BITCOIN__RPCPASSWORD__

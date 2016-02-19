@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Function creating a random password that is the double sha256
+# checksum and cut off with LENGTH, which is the first argument
+# to this function.
+#
+# Example: make_random_password 40
+#
+function make_random_password {
+    LENGTH=$1
+    STR=$(head /dev/urandom | sha256sum | sha256sum)
+    echo ${STR:0:$LENGTH}
+}
