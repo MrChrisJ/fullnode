@@ -113,7 +113,7 @@ sudo make install
 ```  
 
 You can delete ~/bin folder after the compiling.  
-Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really on necessary if you want to use Bitcoin Command Line Interface or run it headlessly. If you do simply enter:  
+Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really only necessary if you want to use Bitcoin Command Line Interface or run it headlessly. If you do simply enter:  
 ```
 mkdir /home/pi/.bitcoin/
 ```   
