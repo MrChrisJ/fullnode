@@ -84,14 +84,11 @@ else
     echo "bitcoin folder already exists, please remove it to rebuild"
 fi
 
-# Make sure we are at the home folder
-cd
-
 ## TODO this could also be optional, only needed in the case the user
 ## wants to use the command line
 
 # Install basic configuration
-if [ ! -d ".bitcoin" ]; then
+if [ ! -d "~/.bitcoin" ]; then
     # Create the directory
     mkdir ~/.bitcoin
 
