@@ -3,11 +3,11 @@
 # Exit immediately if any script errors
 set -e
 
-# Comment row above and uncomment line below for additional debug output
-#set -ex
+# Path to folder where we install source code
+export SRC=~/src
 
-# Variables accessible to other scripts executed by this process
-source ${FULLNODE}/bitcoin/variables
+# Path to the fullnode repository
+export FULLNODE=~/fullnode
 
 # Load some tools we might need
 source ${FULLNODE}/bitcoin/tools
