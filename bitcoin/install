@@ -80,10 +80,6 @@ if [ ! -d "bitcoin" ]; then
 
     # Install bitcoin
     sudo make install
-
-    # Clean up
-    cd
-    rm ${BITCOIN_ROOT} -rf
 else
     echo "bitcoin folder already exists, please remove it to rebuild"
 fi
