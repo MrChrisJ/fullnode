@@ -1,5 +1,8 @@
 # Fullnode
+
 Setting up a Bitcoin Fullnode on a Raspberry Pi 2
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mrchrisj/fullnode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on the ProTip crowd fund: [Not (Just) Made In China](https://www.startjoin.com/ProTip).
 
