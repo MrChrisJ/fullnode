@@ -10,7 +10,7 @@ export SRC=~/src
 export FULLNODE=~/fullnode
 
 # Load some tools we might need
-source ${FULLNODE}/bitcoin/tools
+source ${FULLNODE}/tools
 
 # Install bitcoin
 source ${FULLNODE}/bitcoin/install
