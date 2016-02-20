@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Exit immediately if any script errors
+set -e
+
+# Path to folder where we install source code
+export SRC=~/src
+
+# Path to the fullnode repository
+export FULLNODE=~/fullnode
+
+# Load some tools we might need
+source ${FULLNODE}/tools
+
+# Install bitcoin
+source ${FULLNODE}/bitcoin/install
+
+## TODO consider adding some interactive input for the software below?
+
+# Install iceweasel
+sudo apt-get install iceweasel -y
+
+# Install tor
+sudo apt-get install -y tor
+
+# Install openvpn
+sudo apt-get install -y openvpn
+
+# Install resolvconf
+sudo apt-get install -y resolvconf
+

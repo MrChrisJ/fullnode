@@ -1,0 +1,103 @@
+#!/bin/bash
+
+set -e
+
+# I think we can replace all libboost-x-dev packages with libboost-all-dev
+# (clean up later)
+sudo apt-get install -y autoconf
+sudo apt-get install -y build-essential
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libboost-dev
+sudo apt-get install -y libboost-chrono-dev
+sudo apt-get install -y libboost-filesystem-dev
+sudo apt-get install -y libboost-program-options-dev
+sudo apt-get install -y libboost-system-dev
+sudo apt-get install -y libboost-test-dev
+sudo apt-get install -y libboost-thread-dev
+sudo apt-get install -y libtool
+
+## TODO create some sort of separation where you can decide if you want
+## the GUI or not, i.e. the dependencies below will not be needed
+
+# Dependencies for Graphical User Interface (GUI) Qt Wallet
+sudo apt-get install -y libqt4-dev
+sudo apt-get install -y qt4-dev-tools
+sudo apt-get install -y libprotobuf-dev
+sudo apt-get install -y protobuf-compiler
+sudo apt-get install -y libqrencode-dev
+
+# Lets install here
+mkdir -p ${SRC} && cd ${SRC}
+
+# Use this tag when cloning bitcoin
+BITCOIN_VERSION=v0.11.2
+
+# If the bitcoin folder does not exist
+if [ ! -d "bitcoin" ]; then
+    # Then lets clone the repository and check out on tag
+    git clone -b ${BITCOIN_VERSION} https://github.com/bitcoin/bitcoin.git
+
+    # Enter that folder and save a reference to it
+    cd bitcoin
+    BITCOIN_ROOT=$(pwd)
+
+    # Create a folder to hold the BerkeleyDB files
+    BDB_PREFIX=${BITCOIN_ROOT}/db4
+    mkdir -p ${BDB_PREFIX}
+
+    # Get BerkeleyDB 4.8
+    wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
+
+    # Make sure it has the correct sha256 checksum
+    echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef  db-4.8.30.NC.tar.gz' | sha256sum -c
+
+    # Untar it
+    tar -xzvf db-4.8.30.NC.tar.gz
+
+    # Configure BerkeleyDB to install to ${BDB_PREFIX} (no need for sudo)
+    cd db-4.8.30.NC/build_unix/
+    ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=${BDB_PREFIX}
+
+    # Compile BerkeleyDB using all available cores
+    make -j $(nproc)
+
+    # Install BerkeleyDB
+    make install
+
+    # Go back to the bitcoin folder
+    cd ${BITCOIN_ROOT}
+
+    # Generate ./configure (this is ./autogen on newer versions and will change)
+    ./autogen.sh
+
+    ## TODO remove --with-gui below if the user don't want to use the qt wallet
+
+    # Configure bitcoin
+    ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" --enable-upnp-default --with-gui
+
+    # Compile bitcoin using all available cores
+    make -j $(nproc)
+
+    # Install bitcoin
+    sudo make install
+else
+    echo "bitcoin folder already exists, please remove it to rebuild"
+fi
+
+## TODO this could also be optional, only needed in the case the user
+## wants to use the command line
+
+# Install basic configuration
+if [ ! -d "~/.bitcoin" ]; then
+    # Create the directory
+    mkdir ~/.bitcoin
+
+    # Copy the bitcoin.conf template
+    cp ${FULLNODE}/bitcoin/bitcoin.conf.template ~/.bitcoin/bitcoin.conf
+
+    # Generate a 40 character random password using our make_random_password function
+    PASSWORD=$(make_random_password 40)
+
+    # Insert the password in our generated bitcoin.conf
+    sed -i "s/__FULLNODE__BITCOIN__RPCPASSWORD__/${PASSWORD}/g" ~/.bitcoin/bitcoin.conf
+fi
