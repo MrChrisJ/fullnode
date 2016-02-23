@@ -107,7 +107,7 @@ sudo nano /etc/dphys-swapfile
 ```  
 Change the default size to:  
 ```
-CONF_SWAPSIZE=100
+CONF_SWAPSIZE=1024
 ```  
 To exit ```cntr+X``` then ```Y```  
 ```
