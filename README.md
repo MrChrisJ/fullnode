@@ -1,14 +1,18 @@
 # Fullnode
-
 Setting up a Bitcoin Fullnode on a Raspberry Pi 2
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mrchrisj/fullnode?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on the ProTip crowd fund: [Not (Just) Made In China](https://www.startjoin.com/ProTip).
 
 
 ![Bitcoin Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Device_001.png)  
 *Bitcoin/Pi Artwork by* [*Phneep*](Phneep.com)
+
+# Setup Guides
+
+1. [Setup Bitcoin Core 0.12 using latest version of Raspbian Jessie OSX](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.12_OSX.md)
+2. [Setup Bitcoin Core 0.12 using Jessie Lite for a Headless Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.12_OSX.md)
+3. [Stip down Jessie](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Strip_Down_Raspbian_Jessie.md) to make free space on your node
+4. [Install Extras on your Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Extras.md) including IPFS and Iceweasel Browser
 
 # Motivation
 The goal of this project is to learn and layout a simple process for someone to be able to build a Bitcoin Fullnode using nothing but low cost, open source available tools.
@@ -17,6 +21,7 @@ The main focus will be on educating and inspiring a new generation of people to 
 
 # README.TXT
 ==========
+Getting started with your fullnode once you have bought it or followed the steps above. 
 
 1. Attach external USB Thumb drive enclosed to Raspberry Pi (must be done first)
 2. Attach Ethernet Cable (not included) to your router
