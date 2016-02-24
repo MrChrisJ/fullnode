@@ -99,9 +99,17 @@ make
 ```
 sudo make install
 ```  
+Usually the errors will not be apparent until this last step. In addition to the ```-j2``` flag you may also be getting errors if: 
 
-You can delete ~/bin folder after the compiling.  
-Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really on necessary if you want to use Bitcoin Command Line Interface or run it headlessly. If you do simply enter:
+1. The memory card does not have enough space
+2. You did not set the swap file size high enough
+3. You did not install all of the dependencies near the start of the tutorial
+
+You can delete ~/bin folder after the compiling to save space with:
+```
+sudo rm -r -f /home/pi/bin
+```  
+The ```-r``` means recursive (deletes all subfolders) and the ```-f``` means Force delete without prompting. 
 
 #### Return Swap File Back to Default
 Remember earlier we increased the swap file size. Some people choose to disable Swapfile altogether by setting ```CONF_SWAPSIZE=0``` however we are going to do it slightly differently see [Issue 20](https://github.com/MrChrisJ/fullnode/issues/20).  
@@ -119,14 +127,44 @@ sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```  
 
-#### Create Bitcoin Data Folder
-By default on Linux the data folder is in ~/.bitcoin. You bitcoin.conf file must be in this location for bitcoind to run.
+#### Setting up Bitcoin Data Folder
+Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really only necessary if you want to use Bitcoin Command Line Interface (CLI) and run it headlessly. If you do you need to make sure you have enough space. At the time of writing the Bitcoin Blockchain is around 66Gb which means realistically you will need MicroSD or an external Drive that is at least 128Gb.
+
 ```
 mkdir /home/pi/.bitcoin/
 ```   
+If you have an internal MicroSD drive large enough for the whole blockchain you can skip to the section on creating the bitcoin.conf file. Assuming you will be using external media then do the following:  
+
+Display information about block devices attached to the Raspberry Pi...
+```
+sudo blkid
+```  
+Make a note of the drive name eg ```/dev/sda1```. Then format the drive you wish to use *if* this hasn't been done already. FAT32 is recommended for compatibility with other devices. Skip this step if the device was formatted on your computer. 
+```
+sudo mkfs.vfat /dev/sda1
+```  
+Then do the blkid command again:  
+```
+sudo blkid
+```  
+Make a note of the new UUID number eg. 8736-1215
+```
+sudo nano /etc/fstab
+```  
+Enter the following:  
+```
+UUID=8736-1215    /home/pi/.bitcoin    vfat uid=pi,gid=pi,umask=0022,sync,auto,nosuid,rw,nouser    0    0
+```  
+Replacing the "8736-1215" with whatever your drive actually is. Then reboot and the external drive will automatically mount to /home/pi/.bitcoin.
+```
+sudo reboot
+```  
+
+Next let's go in to our Bitcoin data directory:  
 ```
 cd /home/pi/.bitcoin
 ```  
+Using nano text editor we will create the Bitcoin Configuration file bitcoin.conf
 ```
 nano bitcoin.conf
 ```  
@@ -138,26 +176,41 @@ dbcache=50
 daemon=1
 testnet=0
 ```
-Press ```cntr+X``` followed by ```Y``` then ```Enter``` to save changes and return back to the command line.  
-```
-sudo blkid
-```  
-Make a note of the UUID
+Press ```cntr+X``` followed by ```Y``` then ```Enter``` to save changes and return back to the command line.
 
-```
-sudo nano /etc/fstab
-```  
-Enter the following:  
-```
-UUID=8736-1215    /home/pi/.bitcoin    vfat uid=pi,gid=pi,umask=0022,sync,auto,nosuid,rw,nouser    0    0
-```  
-```
-sudo reboot
-```  
 #### Starting Bitcoind
-To start Bitcoind simply run the following command:  
+To start Bitcoin Daemon type:  
 ```
 bitcoind -daemon
+```  
+To check the status run this command:  
 ```
-#### And that's all there is to it. Youe your Bitcoin #Fullnode is up and running  
-It will take a long while to sync the blockchain from scratch but you can either copy it from another computer if you have another node running.
+bitcoin-cli getinfo
+```  
+While Bitcoin is starting up you will get an error like this one:  
+```
+error code: -28
+error message:
+Verifying blocks...
+```  
+This is normal, be patient and use the up arrow on the keyboard to toggle through the previous used commands. Keep re-entering ```bitcoin-cli getinfo`` and eventually you will see something like this:  
+```
+{
+  "version": 120000,
+  "protocolversion": 70012,
+  "walletversion": 60000,
+  "balance": 0.00000000,
+  "blocks": 96,
+  "timeoffset": 0,
+  "connections": 4,
+  "proxy": "",
+  "difficulty": 1,
+  "testnet": false,
+  "keypoololdest": 1455980870,
+  "keypoolsize": 101,
+  "paytxfee": 0.00000000,
+  "relayfee": 0.00001000,
+  "errors": ""
+}
+```
+**Congratulations you are now running Bitcoin Core 0.12!**
