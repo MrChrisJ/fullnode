@@ -152,15 +152,24 @@ The ```-r``` means recursive (deletes all subfolders) and the ```-f``` means For
 #### Setting up Bitcoin Data Folder
 Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really only necessary if you want to use Bitcoin Command Line Interface (CLI) and run it headlessly. If you do you need to make sure you have enough space. At the time of writing the Bitcoin Blockchain is around 66Gb which means realistically you will need MicroSD or an external Drive that is at least 128Gb.
 
-Assuming you will be using external media do the following:  
 ```
 mkdir /home/pi/.bitcoin/
 ```   
+If you have an internal MicroSD drive large enough for the whole blockchain you can skip to the section on creating the bitcoin.conf file. Assuming you will be using external media then do the following:  
+
+Display information about block devices attached to the Raspberry Pi...
 ```
 sudo blkid
 ```  
-Make a note of the UUID number eg. 8736-1215
-
+Make a note of the drive name eg ```/dev/sda1```. Then format the drive you wish to use *if* this hasn't been done already. FAT32 is recommended for compatibility with other devices. Skip this step if the device was formatted on your computer. 
+```
+sudo mkfs.vfat /dev/sda1
+```  
+Then do the blkid command again:  
+```
+sudo blkid
+```  
+Make a note of the new UUID number eg. 8736-1215
 ```
 sudo nano /etc/fstab
 ```  
