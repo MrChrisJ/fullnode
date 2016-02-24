@@ -148,6 +148,21 @@ You can delete ~/bin folder after the compiling to save space with:
 sudo rm -r -f /home/pi/bin
 ```  
 The ```-r``` means recursive (deletes all subfolders) and the ```-f``` means Force delete without prompting.  
+#### Return Swap File Back to Default
+Remember earlier we increased the swap file size. Some people choose to disable Swapfile altogether by setting ```CONF_SWAPSIZE=0``` however we are going to do it slightly differently see [Issue 20](https://github.com/MrChrisJ/fullnode/issues/20).  
+
+```
+sudo chmod -x /etc/init.d/dphys-swapfile
+sudo swapoff -a
+sudo rm /var/swap
+```
+
+Note to re-enable just reverse the process:  
+```
+sudo chmod +x /etc/init.d/dphys-swapfile
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+```  
 
 #### Setting up Bitcoin Data Folder
 Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really only necessary if you want to use Bitcoin Command Line Interface (CLI) and run it headlessly. If you do you need to make sure you have enough space. At the time of writing the Bitcoin Blockchain is around 66Gb which means realistically you will need MicroSD or an external Drive that is at least 128Gb.
