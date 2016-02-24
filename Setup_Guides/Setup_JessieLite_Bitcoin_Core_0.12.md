@@ -66,7 +66,10 @@ CONF_SWAPSIZE=1024
 ```  
 To exit ```cntr+X``` then ```Y```  
 ```
-sudo service dphys-swapfile restart
+sudo dphys-swapfile setup
+```    
+```
+sudo dphys-swapfile swapon
 ```  
 
 #### Create a folder where we will install the files
@@ -101,18 +104,21 @@ You can delete ~/bin folder after the compiling.
 Once Bitcoin is installed you will need to create a .bitcoin folder inside of your home directory. This is really on necessary if you want to use Bitcoin Command Line Interface or run it headlessly. If you do simply enter:
 
 #### Return Swap File Back to Default
-Remember earlier we increased the swap file size. Some people choose to disable Swapfile altogether by setting ```CONF_SWAPSIZE=0```   
+Remember earlier we increased the swap file size. Some people choose to disable Swapfile altogether by setting ```CONF_SWAPSIZE=0``` however we are going to do it slightly differently see [Issue 20](https://github.com/MrChrisJ/fullnode/issues/20).  
+
 ```
-sudo nano /etc/dphys-swapfile
-```  
-Change the default size to:  
+sudo chmod -x /etc/init.d/dphys-swapfile
+sudo swapoff -a
+sudo rm /var/swap
 ```
-CONF_SWAPSIZE=1024
-```  
-To exit ```cntr+X``` then ```Y```  
+
+Note to re-enable just reverse the process:  
 ```
-sudo service dphys-swapfile restart
+sudo chmod +x /etc/init.d/dphys-swapfile
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
 ```  
+
 #### Create Bitcoin Data Folder
 By default on Linux the data folder is in ~/.bitcoin. You bitcoin.conf file must be in this location for bitcoind to run.
 ```
