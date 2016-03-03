@@ -6,6 +6,6 @@ Next thing to do is go to the folder python-bitcoinlib-master.zip which is the z
 So after you have successfully extracted the Library you can go to the terminal or command line in Windows it will be a bit different in Windows
 Once the terminal has loaded up type cd Downloads (cd stands for Change Directory) after you have cd into Downloads navigate to the folder python-bitcoinlib-master 
 So once you have navigated to the folder type ls and press enter (ls stands for list segments it lists on all the segments in your current directory),
-you will see a file called setup.py nwow you will need to type sudo python setup.py install and you will see it installing the python bitcoin library after it has finished installing you can go to idle or just type python if you type python you will see the python command line, 
+you will see a file called setup.py now you will need to type sudo python setup.py install and you will see it installing the python bitcoin library after it has finished installing you can go to idle or just type python if you type python you will see the python command line, 
 so type import bitcoin if it has installed successfully for code example visit this link https://github.com/OpenProvenance/python-bitcoinlib-scripting
 
