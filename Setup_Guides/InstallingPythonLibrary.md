@@ -1,6 +1,6 @@
 ## Setting up Peter Todd's Bitcoin Library
 
-1. First thing to do is download the folder from Peter Todds Github Page https://github.com/petertodd/python-bitcoinlib 
+1. First thing to do is download the folder from Peter Todds Github Page https://github.com/petertodd/python-bitcoinlib/archive/master.zip
 2. You have to download the zip folder from the Github Page 
 3. After installing the zip file you will need to go to file manager which is on the top left hand side 
 4. Once in file manager click on Downloads that is where you have installed the unzip folder
