@@ -8,4 +8,5 @@ These are the setup guides if you want to build and customise your own Fullnode.
 4. [Install Extras on your Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Extras.md) including IPFS and Iceweasel Browser
 5. [Installing Bitcoin Python Library](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/InstallingPythonLibrary.md#setting-up-peter-todds-bitcoin-library) maintained by @PeterTodd
 6. [Bitcoin Configuration file bitcoin.conf](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/bitcoin.conf) with settings tailored to the Raspberry Pi versions 2 and 3. 
+7. [Setup Bitcoin Over Tor](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Bitcoin_Over_Tor.md) for anonymity
 

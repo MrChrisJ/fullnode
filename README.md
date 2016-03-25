@@ -8,7 +8,7 @@ This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on
 ![Bitcoin Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Device_001.png)  
 *Bitcoin/Pi Artwork by* [*Phneep*](Phneep.com)
 
-# Setup Guides
+# [Setup Guides](https://github.com/MrChrisJ/fullnode/tree/master/Setup_Guides#setup-guides)
 
 1. [Setup Bitcoin Core 0.12 using latest version of Raspbian Jessie OSX](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.12_OSX.md)
 2. [Setup Bitcoin Core 0.12 using Jessie Lite for a Headless Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.12_OSX.md)
