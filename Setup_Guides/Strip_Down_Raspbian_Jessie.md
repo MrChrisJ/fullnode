@@ -15,12 +15,18 @@ sudo apt-get remove --purge oracle-java8-jdk -y
 ```
 sudo apt-get remove --purge omxplayer penguinspuzzle -y
 ```  
-Remove Libre Office
 ```
-sudo apt-get remove --purge libreoffice*
+sudo apt-get remove --purge greenfoot bluej -y
+```  
+```
+sudo apt-get remove --purge claws-mail -y
 ```  
 ```
 sudo apt-get remove --purge sonic-pi -y
+```  
+Remove Libre Office
+```
+sudo apt-get remove --purge libreoffice*
 ```  
 At the end of any of these steps you can run:  
 ```
