@@ -24,6 +24,9 @@ sudo apt-get remove --purge claws-mail -y
 ```
 sudo apt-get remove --purge sonic-pi -y
 ```  
+```
+sudo apt-get remove --purge dillo netsurf-gtk -y
+```  
 Remove Libre Office
 ```
 sudo apt-get remove --purge libreoffice*
