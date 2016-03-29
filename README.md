@@ -14,6 +14,7 @@ This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on
 2. [Setup Bitcoin Core 0.12 using Jessie Lite for a Headless Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.12_OSX.md)
 3. [Strip down Jessie](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Strip_Down_Raspbian_Jessie.md) to make free space on your node
 4. [Install Extras on your Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Extras.md) including IPFS and Iceweasel Browser
+5. [Setup Bitcoin Configuration](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/bitcoin.conf)
 
 # Motivation
 The goal of this project is to learn and layout a simple process for someone to be able to build a Bitcoin Fullnode using nothing but low cost, open source available tools.
