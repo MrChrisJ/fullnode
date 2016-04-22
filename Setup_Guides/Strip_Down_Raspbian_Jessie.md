@@ -4,7 +4,7 @@ Raspbian Jessie comes with a lot of bundled software which you may not need. Her
 These following steps are optional, just delete what you don't want. Thanks to Glenn Geenen's Blog Post: [Strip down Raspbian](http://glenngeenen.be/strip-down-raspbian/) for some of the commands used here.
 
 ```
-sudo apt-get remove minecraft-pi -y
+sudo apt-get remove --purge minecraft-pi -y
 ```  
 ```
 sudo apt-get remove --purge wolfram-engine scratch -y
@@ -15,12 +15,25 @@ sudo apt-get remove --purge oracle-java8-jdk -y
 ```
 sudo apt-get remove --purge omxplayer penguinspuzzle -y
 ```  
-Remove Libre Office
 ```
-sudo apt-get remove --purge libreoffice*
+sudo apt-get remove --purge greenfoot bluej -y
+```  
+```
+sudo apt-get remove --purge claws-mail -y
 ```  
 ```
 sudo apt-get remove --purge sonic-pi -y
+```  
+```
+sudo apt-get remove --purge dillo netsurf-gtk -y
+```  
+#### Or Remove them all in one go
+```
+sudo apt-get remove --purge minecraft-pi wolfram-engine scratch oracle-java8-jdk omxplayer penguinspuzzle greenfoot bluej claws-mail sonic-pi dillo netsurf-gtk -y
+```  
+#### Remove Libre Office
+```
+sudo apt-get remove --purge libreoffice*
 ```  
 At the end of any of these steps you can run:  
 ```
