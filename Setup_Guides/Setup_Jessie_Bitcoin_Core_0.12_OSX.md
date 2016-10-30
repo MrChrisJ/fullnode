@@ -8,6 +8,9 @@
 
 The new version of Raspbian Jessie is out: 2016-02-09-raspbian-jessie.img, at the time of writing includes bundled software which takes up extra room on the disk. To remove these packages see instructions on Strip Down Raspian.  
 
+*Note*  
+At the time of writing **2016-02-26-raspbian-jessie.img** released for the latest Raspberry Pi 3 will throw up errors when you reach the Autogen step before compiling Bitcoin. It is recommended that you download the [latest version of Raspbian](https://www.raspberrypi.org/downloads/raspbian/) **2016-03-18-raspbian-jessie.img** to resolve this issue when compiling for the Raspberry Pi 3.
+
 #### Step 1 - Installing Raspbian on to Micro SD
 See [Instalation Instructions](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) on the Raspberry Pi website that includes all operating systems.  
 
