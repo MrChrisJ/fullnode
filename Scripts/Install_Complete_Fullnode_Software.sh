@@ -16,7 +16,7 @@ cd db-4.8.30.NC/build_unix/
 make -j4
 sudo make install
 cd ~/bin
-git clone -b 0.12 https://github.com/bitcoin/bitcoin
+git clone -b v0.13.1 https://github.com/bitcoin/bitcoin
 cd bitcoin/
 ./autogen.sh
 ./configure CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib" --enable-upnp-default --with-gui=qt4
