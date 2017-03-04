@@ -121,7 +121,7 @@ sudo make install
 cd ~/bin
 ```   
 ```
-git clone -b v0.13.1 https://github.com/bitcoin/bitcoin
+git clone -b v0.13.2 https://github.com/bitcoin/bitcoin
 ```  
 ```
 cd bitcoin/
