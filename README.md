@@ -10,8 +10,8 @@ This is the getting started guide for the Raspberry Pi Bitcoin Fullnodes sold on
 
 # [Setup Guides](https://github.com/MrChrisJ/fullnode/tree/master/Setup_Guides#setup-guides)
 
-1. [Setup Bitcoin Core 0.13.1 using latest version of Raspbian Jessie OSX](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.13.1.md)
-2. [Setup Bitcoin Core 0.13.1 using Jessie Lite for a Headless Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/etup_JessieLite_Bitcoin_Core_0.13.1.md)
+1. [Setup Bitcoin Core 0.13.2 using latest version of Raspbian Jessie OSX](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Core_0.13.2.md)
+2. [Setup Bitcoin Core 0.13.2 using Jessie Lite for a Headless Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/etup_JessieLite_Bitcoin_Core_0.13.2.md)
 3. [Strip down Jessie](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Strip_Down_Raspbian_Jessie.md) to make free space on your node
 4. [Install Extras on your Fullnode](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/Setup_Jessie_Bitcoin_Extras.md) including IPFS and Iceweasel Browser
 5. [Setup Bitcoin Configuration](https://github.com/MrChrisJ/fullnode/blob/master/Setup_Guides/bitcoin.conf)

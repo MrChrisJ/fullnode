@@ -116,7 +116,7 @@ make -j4
 sudo make install
 ```  
 
-#### Installing Bitcoin 0.12
+#### Installing Bitcoin 0.13.2
 ```
 cd ~/bin
 ```   

@@ -80,9 +80,9 @@ mkdir ~/bin
 cd ~/bin
 ```
 
-#### Installing Bitcoin 0.12    
+#### Installing Bitcoin 0.13.2  
 ```
-git clone -b v0.13.1 https://github.com/bitcoin/bitcoin
+git clone -b v0.13.2 https://github.com/bitcoin/bitcoin
 ```  
 ```
 cd bitcoin/
