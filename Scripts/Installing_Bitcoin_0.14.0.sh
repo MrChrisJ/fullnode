@@ -4,7 +4,8 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 # Install dependencies for Bitcoin Core (not the GUI)
-sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libb$
+sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev libtool libevent-dev -y
+
 # Install dependencies for Bitcoin QT (GUI)
 sudo apt-get install libqt4-dev qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
 # Setup Swap file
