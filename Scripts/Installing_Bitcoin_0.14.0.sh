@@ -1,11 +1,9 @@
-
 #!/bin/sh
 # Install updates
 sudo apt-get update
 sudo apt-get upgrade -y
 # Install dependencies for Bitcoin Core (not the GUI)
 sudo apt-get install build-essential autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev libtool libevent-dev -y
-
 # Install dependencies for Bitcoin QT (GUI)
 sudo apt-get install libqt4-dev qt4-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev -y
 # Setup Swap file
@@ -31,7 +29,7 @@ sudo rm -r -f /home/pi/bin
 mkdir /home/pi/.bitcoin/
 cd .bitcoin/
 touch bitcoin.conf
-printf 'listen=1\nserver=1\ndaemon=0\ntestnet=0\nmempoolexpiry=72\nmaxmempool=300\nmaxorphantx=100\nlimitfreerelay=10\nminrelaytxfee=0.0001\nmaxconnections=40\n' >> bi$
+printf 'listen=1\nserver=1\ndaemon=0\ntestnet=0\nmempoolexpiry=72\nmaxmempool=300\nmaxorphantx=100\nlimitfreerelay=10\nminrelaytxfee=0.0001\nmaxconnections=40\n' >> bitcoin.conf
 
 # Remove the swap file we made earlier
 sudo swapoff -a
